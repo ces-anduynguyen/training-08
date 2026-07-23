@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import PageTwo from './pages/PageTwo'
 import PageThree from './pages/PageThree'
 import PageFour from './pages/PageFour'
+import A11yOverlay from './dev-tools/A11yOverlay'
 
 const tabStyle: CSSProperties = {
   padding: '8px 16px',
@@ -57,6 +58,8 @@ function App() {
           <Route path="/page-four" element={<PageFour />} />
         </Routes>
       </main>
+
+      {import.meta.env.DEV && <A11yOverlay />}
     </div>
   )
 }
